@@ -12,4 +12,6 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 ## Major Methods/Components. 
 
+getCount()
+
 
