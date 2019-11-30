@@ -21,8 +21,39 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 ## Example Project and Code.
 
-**First** Import selected images into drawable that you want to view in the Gallery.
+**First:** Import selected images into drawable that you want to view in the Gallery.
 
 ![image of drawable](https://github.com/lucasfini/Gallery/blob/master/images/drawable.png)
 
+**Second:** Go into **res/layout/activity_main.xml** and use the code below. 
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    a
+    //Create layout for the Gallery.
+
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    //Create layout to be able to select images.
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_marginTop="100dp"
+        android:layout_width="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="250dp"
+        android:src="@drawable/image1" />
+</LinearLayout>
+```
 
