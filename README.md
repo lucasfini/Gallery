@@ -21,6 +21,8 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 ## Example Project and Code.
 
+**First** Import selected images into drawable that you want to view in the Gallery.
 
+![image of drawable](https://github.com/lucasfini/Gallery/blob/master/images/drawable.png)
 
 
