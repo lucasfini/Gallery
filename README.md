@@ -25,7 +25,9 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 ![image of drawable](https://github.com/lucasfini/Gallery/blob/master/images/drawable.png)
 
-**Second:** Go into **res/layout/activity_main.xml** and use the code below. 
+**Second:** Go into **res/layout/** and use the code below. This creates the layout for Gallery and ImageView. 
+
+**activity_main.xml**
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -56,4 +58,100 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
         android:src="@drawable/image1" />
 </LinearLayout>
 ```
+
+The **android:src** in <ImageView> points to the first image that will show up in the gallery.
+
+**Third:** Use the code below in your **MainActivity.java**.
+
+```
+public class MainActivity extends AppCompatActivity {
+
+    // Variable for ImageView.
+    private ImageView sImage;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // TODO 1.3 Create two variables, one for Gallery and one for ImageView. Attach appropriate ids from layout.
+        Gallery ims = (Gallery) findViewById(R.id.gallery);
+        sImage = (ImageView) findViewById(R.id.imageView);
+
+        ims.setSpacing(1);
+
+        // TODO 1.4 Create ImageAdaptor class which extends BaseAdaptor. This will work as a bridge between AdapterView and the data source that gets imputed.
+        final ImageAdapter gImageAdapter= new ImageAdapter(this);
+        ims.setAdapter(gImageAdapter);
+
+       // TODO 1.5 This will allow a user to click on an image, and for response to happen.
+        ims.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                // show the selected Image
+                sImage.setImageResource(gImageAdapter.images[position]);
+            }
+        });
+    }
+}
+```
+A **ImageAdaptor** class will be created which will entend the BaseAdaptor class. This will connect the Gallery view with the images from ImageView views. 
+
+**Fourth** Use this code for the **ImageAdapter** class
+
+```
+  class ImageAdapter extends BaseAdapter
+    {
+        private Context Mcontext;
+
+       //Constructor
+        public ImageAdapter(Context context) {
+
+            Mcontext = context;
+        }
+        // Gets length of array.
+        @Override
+        public int getCount() {
+
+            return images.length;
+        }
+        // Gets the data associated with the specified position in the list.
+        @Override
+        public Object getItem(int pos) {
+
+            return pos;
+        }
+        // Returns the position within the adaptors data set.
+        @Override
+        public long getItemId(int pos) {
+
+            return pos;
+        }
+        // This allows the developer to inflate the view into the proper layout parameters.
+        public View getView(int index, View view, ViewGroup viewGroup)
+        {
+            ImageView i = new ImageView(Mcontext);
+
+            i.setImageResource(images[index]);
+            i.setLayoutParams(new Gallery.LayoutParams(200, 200));
+
+            i.setScaleType(ImageView.ScaleType.FIT_XY);
+            return i;
+        }
+        // TODO 1.1 Add Images to res/drawable to fill gallary.
+        //TODO 1.2 Create array for images and grab images from drawable. Example below.
+
+       //Array of images.
+        public Integer[] images = {
+                R.drawable.image1,
+                R.drawable.image2,
+                R.drawable.image3,
+                R.drawable.image4,
+                R.drawable.image5
+        };
+    }
+    ```
+  
+  The images array is used to grab all the images from the drawable directory. It allows these images to be used by ImageView and Gallery. 
+  
+
 
