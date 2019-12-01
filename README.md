@@ -21,6 +21,8 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 ## Example Project and Code.
 
+I have made the code available to download on this github page.
+
 **First:** Import selected images into drawable that you want to view in the Gallery.
 
 ![image of drawable](https://github.com/lucasfini/Gallery/blob/master/images/drawable.png)
@@ -35,8 +37,9 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
-    a
+    tools:context=".MainActivity"
+    android:background="@android:color/holo_blue_light>
+    
     //Create layout for the Gallery.
 
     <Gallery
@@ -54,6 +57,7 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
         android:layout_marginTop="100dp"
         android:layout_width="250dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
         android:layout_height="250dp"
         android:src="@drawable/image1" />
 </LinearLayout>
@@ -78,7 +82,11 @@ public class MainActivity extends AppCompatActivity {
         Gallery ims = (Gallery) findViewById(R.id.gallery);
         sImage = (ImageView) findViewById(R.id.imageView);
 
+        // Spacing Between images. 
         ims.setSpacing(1);
+        
+          //Moves Images to the bottom.
+        ims.setY(1550);
 
         // TODO 1.4 Create ImageAdaptor class which extends BaseAdaptor. This will work as a bridge between AdapterView and the data source that gets imputed.
         final ImageAdapter gImageAdapter= new ImageAdapter(this);
@@ -96,11 +104,21 @@ public class MainActivity extends AppCompatActivity {
 ```
 A **ImageAdaptor** class will be created which will entend the BaseAdaptor class. This will connect the Gallery view with the images from ImageView views. 
 
-**Fourth** Use this code for the **ImageAdapter** class
+**Fourth:** Use this code for the **ImageAdapter** class
 
 ```
   class ImageAdapter extends BaseAdapter
     {
+    
+        //Array of images.
+        public Integer[] images = {
+                R.drawable.image1,
+                R.drawable.image2,
+                R.drawable.image3,
+                R.drawable.image4,
+                R.drawable.image5
+        };
+        
         private Context Mcontext;
 
        //Constructor
@@ -140,18 +158,18 @@ A **ImageAdaptor** class will be created which will entend the BaseAdaptor class
         // TODO 1.1 Add Images to res/drawable to fill gallary.
         //TODO 1.2 Create array for images and grab images from drawable. Example below.
 
-       //Array of images.
-        public Integer[] images = {
-                R.drawable.image1,
-                R.drawable.image2,
-                R.drawable.image3,
-                R.drawable.image4,
-                R.drawable.image5
-        };
+   
     }
-    ```
+
+```
   
   The images array is used to grab all the images from the drawable directory. It allows these images to be used by ImageView and Gallery. 
   
+## References. 
 
+I have used a number of references for this assignment. Although I did use the code from the references, I made sure to use it in my own way and not copy it directly. 
+
+[link to android developer!](https://developer.android.com/reference/android/widget/Gallery)
+[link to Create Gallery in Android app!](http://www.exceptionbound.com/programming-tut/android-tutorial/create-gallery-in-android-using-android-studio)
+[link to Android Gallery View Example Tutorial!](https://www.journaldev.com/9546/android-gallery-view-example-tutorial)
 
