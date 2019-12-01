@@ -56,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
 // TODO 1.4.1 Fill ImageAdaptor Class with these methods: getCount(), getItem(), getItemId(), getView.
     class ImageAdapter extends BaseAdapter
     {
+
+        // TODO 1.1 Add Images to res/drawable to fill gallary.
+        //TODO 1.2 Create array for images and grab images from drawable. Example below.
+
         //Array of images.
         public Integer[] images = {
                 R.drawable.image1,
