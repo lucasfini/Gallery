@@ -13,10 +13,15 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 ## Major Methods/Components. 
 
 **getCount()** Gets the length of the array 
+
 **getItem()** Gets the data associated with the specified position in the list.
+
 **getItemId()** Returns the position within the adaptors data set.
+
 **getView()** This allows the developer to inflate the view into the proper layout parameters.
+
 **onItemClick** This allows a user to click/drag on an image, and get a response in return. 
+
 **.setLayoutParams** Uses **Gallery.LayoutParams** to set the size of the images in ImageView. 
 
 ## Example Project and Code.
@@ -170,6 +175,8 @@ A **ImageAdaptor** class will be created which will entend the BaseAdaptor class
 I have used a number of references for this assignment. Although I did use the code from the references, I made sure to use it in my own way and not copy it directly. 
 
 [link to android developer!](https://developer.android.com/reference/android/widget/Gallery)
+
 [link to Create Gallery in Android app!](http://www.exceptionbound.com/programming-tut/android-tutorial/create-gallery-in-android-using-android-studio)
+
 [link to Android Gallery View Example Tutorial!](https://www.journaldev.com/9546/android-gallery-view-example-tutorial)
 
