@@ -115,6 +115,9 @@ A **ImageAdaptor** class will be created which will entend the BaseAdaptor class
   class ImageAdapter extends BaseAdapter
     {
     
+     // TODO 1.1 Add Images to res/drawable to fill gallary.
+        //TODO 1.2 Create array for images and grab images from drawable. Example below.
+    
         //Array of images.
         public Integer[] images = {
                 R.drawable.image1,
@@ -160,8 +163,7 @@ A **ImageAdaptor** class will be created which will entend the BaseAdaptor class
             i.setScaleType(ImageView.ScaleType.FIT_XY);
             return i;
         }
-        // TODO 1.1 Add Images to res/drawable to fill gallary.
-        //TODO 1.2 Create array for images and grab images from drawable. Example below.
+
 
    
     }
