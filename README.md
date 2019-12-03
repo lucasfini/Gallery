@@ -1,11 +1,11 @@
 # Gallery
 
 ## Table of Contents
-[Introduction](#Introduction)
-[History](#History)
-[Major Methods/Components](#Major_Methods_Components)
-[Example Project/Code](#Example_Project_Code)
-[References](#References)
+* [Introduction](#Introduction)
+* [History](#History)
+* [Major Methods/Components](#Major_Methods_Components)
+* [Example Project/Code](#Example_Project_Code)
+* [References](#References)
 
 
 ## <a name="Introduction"> Introduction </a>
