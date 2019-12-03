@@ -2,18 +2,22 @@
 
 ## Table of Contents
 [Introduction](#Introduction)
+[History](#History)
+[Methods](#Major Methods/Components)
+[Example](#Example Project/Code)
+[References](#References)
 
 
 ## <a name="Introduction"> Introduction </a>
 
 The android Gallery is a View that shows items in a center-locked, horizontally scrolling list. Although it isn't used anymore, when it was available it allowed users to view photos one at a time, in a organized manner. It uses the interface **Adapter** to populate items to the Gallery. The Adaptor class etends **BaseAdaptor** class and overrides the **getView()** method. It is responsible for making a View for each item in the data set. The **getView()** method uses **Gallery.LayoutParams** as its layout parameters type.
 
-## History
-
+## <a name="History"> History </a>
 This component was introduced in **API level 1** and was Deprecated in **API level 16**. Since the widget is no longer supported, some great alternatives are: **HorizontalScrollView** and **ViewPager**. It belongs to the **android.widget.Gallery** class and was included in the **android.view.View** package library.
 
 ![image of packages](https://github.com/lucasfini/Gallery/blob/master/images/Screen%20Shot%202019-11-30%20at%206.07.46%20PM.png)
 
+<a name="Methods"> Major Methods/Components </a>
 ## Major Methods/Components. 
 
 **getCount()** Gets the length of the array 
@@ -28,7 +32,7 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 **.setLayoutParams** Uses **Gallery.LayoutParams** to set the size of the images in ImageView. 
 
-## Example Project and Code.
+## <a name="Example"> Example Project and Code</a>
 
 I have made the code available to download on this github page.
 
@@ -176,7 +180,7 @@ A **ImageAdaptor** class will be created which will entend the BaseAdaptor class
   
   The images array is used to grab all the images from the drawable directory. It allows these images to be used by ImageView and Gallery. 
   
-## References. 
+## <a name="References"> References </a>
 
 I have used a number of references for this assignment. Although I did use the code from the references, I made sure to use it in my own way and not copy it directly. 
 
