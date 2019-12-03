@@ -1,6 +1,10 @@
 # Gallery
 
-## Introduction
+## Table of Contents
+[Introduction](#Introduction)
+
+
+## <a name="Introduction"> Introduction </a>
 
 The android Gallery is a View that shows items in a center-locked, horizontally scrolling list. Although it isn't used anymore, when it was available it allowed users to view photos one at a time, in a organized manner. It uses the interface **Adapter** to populate items to the Gallery. The Adaptor class etends **BaseAdaptor** class and overrides the **getView()** method. It is responsible for making a View for each item in the data set. The **getView()** method uses **Gallery.LayoutParams** as its layout parameters type.
 
