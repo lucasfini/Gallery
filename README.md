@@ -17,7 +17,7 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 ![image of packages](https://github.com/lucasfini/Gallery/blob/master/images/Screen%20Shot%202019-11-30%20at%206.07.46%20PM.png)
 
-## <a name="Major Methods/Components"> Major Methods/Components </a>
+## <a name="Major Methods/Components">Major Methods/Components</a>
 
 
 **getCount()** Gets the length of the array 
@@ -32,7 +32,7 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 **.setLayoutParams** Uses **Gallery.LayoutParams** to set the size of the images in ImageView. 
 
-## <a name="Example Project/Code"> Example Project/Code</a>
+## <a name="Example Project/Code">Example Project/Code</a>
 
 I have made the code available to download on this github page.
 
