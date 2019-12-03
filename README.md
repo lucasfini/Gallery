@@ -17,7 +17,7 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 ![image of packages](https://github.com/lucasfini/Gallery/blob/master/images/Screen%20Shot%202019-11-30%20at%206.07.46%20PM.png)
 
-## <a name="Major_Methods_Components">MajorM ethods/Components</a>
+## <a name="Major_Methods_Components">Major Methods/Components</a>
 
 **getCount()** Gets the length of the array 
 
