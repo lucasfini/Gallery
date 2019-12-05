@@ -25,9 +25,11 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 **getItemId()** Returns the position within the adaptors data set. This allows you to perform multiple operations based on the unique ID of an object in an array or list. For example, if a developer were to have a database with tons of data, if each were uniquely ID'd then the developer can easily perform multiple operations (update/remove) on specific items.
 
-**getView()** This allows the developer to inflate the view into the proper layout parameters.
+**getView()** This allows the developer to inflate the view into the proper layout parameters. This method allows you to get each item of the Adaptor class to access each element. For example if you create a array and a child view of images (ImageView). To access or modify each element in the Adaptor class you need to have getView.
 
-**onItemClick** This allows a user to click/drag on an image, and get a response in return. 
+**setonItemClickListener** This allows a user to click/drag on an image, and get a response in return. It is a Listener that keeps listening for events. When an item in the Gallery has been clicked it will fire up onItemClick callback. 
+
+**onItemClick** This is a Callback method. It is invoked when an item in Gallery has been clicked. 
 
 **.setLayoutParams** Uses **Gallery.LayoutParams** to set the size of the images in ImageView. 
 
