@@ -19,11 +19,11 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 ## <a name="Major_Methods_Components">Major Methods/Components</a>
 
-**getCount()** Gets the length of the array 
+**getCount()** Fetches the length of the image array. This is used to get the exact number of photos that are imported into the project. This is important because it will give the developer data that will be needed for the gallery component. Also, it must be included in the ImageAdaptor class or else their will be a error.
 
-**getItem()** Gets the data associated with the specified position in the list.
+**getItem()** Gets the data associated with the specified position in the list. It provides a way for the developer to access data in the adapter. For example, your adaptor holds integer elements, getItem() will return a int object. 
 
-**getItemId()** Returns the position within the adaptors data set.
+**getItemId()** Returns the position within the adaptors data set. This allows you to perform multiple operations based on the unique ID of an object in an array or list. For example, if a developer were to have a database with tons of data, if each were uniquely ID'd then the developer can easily perform multiple operations (update/remove) on specific items.
 
 **getView()** This allows the developer to inflate the view into the proper layout parameters.
 
