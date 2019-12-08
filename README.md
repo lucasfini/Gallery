@@ -159,7 +159,7 @@ A **ImageAdaptor** class will be created which will entend the BaseAdaptor class
         }
         // Gets the data associated with the specified position in the list.
         @Override
-        public Object getItem(int pos) {
+       **public Object getItem**(int pos) {
 
             return pos;
         }
