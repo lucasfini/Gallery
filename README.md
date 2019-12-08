@@ -70,6 +70,10 @@ I have made the code available to download on this github page.
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        //Major XML ATTRIBUTES
+        android:gravity="center"
+        android:animationDuration="1000"
+        android:unselectedAlpha="10"
         />
 
     //Create layout to be able to select images.
@@ -115,7 +119,9 @@ public class MainActivity extends AppCompatActivity {
         ims.setAdapter(gImageAdapter);
 
        // TODO 1.5 This will allow a user to click on an image, and for response to happen.
+       // MAJOR METHOD
         ims.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        // MAJOR METHOD
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                 // show the selected Image
                 sImage.setImageResource(gImageAdapter.images[position]);
@@ -151,30 +157,31 @@ A **ImageAdaptor** class will be created which will entend the BaseAdaptor class
 
             Mcontext = context;
         }
-        // Gets length of array.
+        // MAJOR METHOD. Gets length of array.
         @Override
         public int getCount() {
 
             return images.length;
         }
-        // Gets the data associated with the specified position in the list.
+        // MAJOR METHOD. Gets the data associated with the specified position in the list. 
         @Override
-       **public Object getItem**(int pos) {
+       public Object getItem(int pos) {
 
             return pos;
         }
-        // Returns the position within the adaptors data set.
+        // MAJOR METHOD.. Returns the position within the adaptors data set.
         @Override
         public long getItemId(int pos) {
 
             return pos;
         }
-        // This allows the developer to inflate the view into the proper layout parameters.
+        // MAJOR METHOD.. This allows the developer to inflate the view into the proper layout parameters.
         public View getView(int index, View view, ViewGroup viewGroup)
         {
             ImageView i = new ImageView(Mcontext);
 
             i.setImageResource(images[index]);
+            // MAJOR COMPONENT.
             i.setLayoutParams(new Gallery.LayoutParams(200, 200));
 
             i.setScaleType(ImageView.ScaleType.FIT_XY);
