@@ -16,6 +16,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:animationDuration="1000"
+        android:unselectedAlpha="10"
         />
 
     //Create layout to be able to select images.
