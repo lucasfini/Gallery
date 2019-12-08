@@ -33,6 +33,14 @@ This component was introduced in **API level 1** and was Deprecated in **API lev
 
 **.setLayoutParams** Uses **Gallery.LayoutParams** to set the size of the images in ImageView. 
 
+## XML Attributes 
+
+**android:animationDuration** Is used to time how long a transmission animation from one image to another will run for 
+
+**android:gravity** Is used to determine where an object should position its contents. Using the X and Y axis. 
+
+**android:unselectedAlpha** Sets the alpha on the items that are not selected. 
+
 ## <a name="Example_Project_Code">Example Project/Code</a>
 
 I have made the code available to download on this github page.
