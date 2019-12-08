@@ -189,6 +189,8 @@ A **ImageAdaptor** class will be created which will entend the BaseAdaptor class
   
   The images array is used to grab all the images from the drawable directory. It allows these images to be used by ImageView and Gallery. 
   
+  [image of screen](https://github.com/lucasfini/Gallery/blob/master/images/screen.png)
+  
 ## <a name="References"> References </a>
 
 I have used a number of references for this assignment. Although I did use the code from the references, I made sure to use it in my own way and not copy it directly. 
